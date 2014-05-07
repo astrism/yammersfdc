@@ -36,6 +36,7 @@ Technology opinions are.. everywhere! I like to hear peoples tool recommendation
 + create app
 	+ CORS is important. Here is some good documentation on why we need to reference them here [http://www.html5rocks.com/en/tutorials/cors/]. TLDR; when using client side javascript to make callouts to external sources (XHR to Yammer API), the requested server has to be able to accept Cross-Origin requests. We won't go into more detail as it is out of the scope of this article.
 	+ [screen shot of app config'd]
+
 Now we're ready to create a place for our Yammer application to live. On to Salesforce.com
 
 ###Salesforce setup
