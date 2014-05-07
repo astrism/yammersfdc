@@ -23,7 +23,7 @@ Technology opinions are.. everywhere! I like to hear peoples tool recommendation
 
 ###Yammer signup
 + Assuming you have an existing yammer org
-The first thing you need to start is a Yammer domain. We are assuming you already have this setup because Yammer checks your email address. "Only people with a verified company email address can join your company network." - Yammer
+	+ The first thing you need to start is a Yammer domain. We are assuming you already have this setup because Yammer checks your email address. "Only people with a verified company email address can join your company network." - Yammer
 You can sign-up for Yamme here https://www.yammer.com/?return_home=true
 + create group, Sales (any group will be fine, just change 'Sales' to your group name)
 + links for yammer api , js sdk embed
