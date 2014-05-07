@@ -1,0 +1,31 @@
+<apex:page showHeader="true" sidebar="true" standardController="Account" >
+	<script type="text/javascript" data-app-id="T7puTlcfvsPtImw14viWJw" src="https://assets.yammer.com/assets/platform_js_sdk.js"></script>
+	<span id="yammer-login"></span>
+	<script> 
+		yam.connect.loginButton('#yammer-login', function (resp) { 
+			if (resp.authResponse) { 
+				yam.connect.embedFeed({
+					container: '#embedded-feed',
+					network: 'gonimbly.com',
+					feedType: 'group',
+					feedId: 'all',
+					config: {
+						use_sso: true,
+						header: false,
+						footer: false
+					}
+				});
+			}
+			else {
+				console.log('not logged in');
+			}
+		}); 
+	</script>
+
+	<div id="embed">
+		<div id="embedded-feed" style="width: 100%; height: 300px;"></div>
+	</div>
+	
+	<!-- This page is designed to override the view action in SFDC accounts -->
+	<apex:detail subject="{!account.Id}" />
+</apex:page>
