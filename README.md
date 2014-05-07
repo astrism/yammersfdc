@@ -22,29 +22,29 @@ The sample provided is only a demo of the functionality included in Yammer's Emb
 Technology opinions are.. everywhere! I like to hear peoples tool recommendations, so there'll be some speckled throughout the guide. We'll also be jumping back and forth between Yammer and Salesforce.com platforms so I'll try to be explicit.
 
 ###Yammer signup
--Assuming you have an existing yammer org
++Assuming you have an existing yammer org
 The first thing you need to start is a Yammer domain. We are assuming you already have this setup because Yammer checks your email address. "Only people with a verified company email address can join your company network." - Yammer
 You can sign-up for Yamme here https://www.yammer.com/?return_home=true
 -create group, Sales (any group will be fine, just change 'Sales' to your group name)
--links for yammer api - js sdk embed
++links for yammer api , js sdk embed
 Here are the links to the documentation we are referencing throughout this guide.
--create app
++create app
 CORS is important. Here is some good documentation on why we need to reference them here [http://www.html5rocks.com/en/tutorials/cors/]. TLDR; when using client side javascript to make callouts to external sources (XHR to Yammer API), the requested server has to be able to accept Cross-Origin requests. We won't go into more detail as it is out of the scope of this article.
 [screen shot of app config'd]
 Now we're ready to create a place for our Yammer application to live. On to Salesforce.com
 
 ###Salesforce setup
--create a new salesforce instance (DE)
--links for vf api
--create visualforce page (mavens and )
--view page in sfdc
--copy / paste yammer js sdk and embed sample
---snippet for embed sales feed
--copy / paste public token
--add vf detail component
--add page override on account
--add CORS in yammer javascript origins
--add collapsible
++create a new salesforce instance (DE)
++links for vf api
++create visualforce page (mavens and )
++view page in sfdc
++copy / paste yammer js sdk and embed sample
++-snippet for embed sales feed
++copy / paste public token
++add vf detail component
++add page override on account
++add CORS in yammer javascript origins
++add collapsible
 
 ###Salesforce deploy to production
 
