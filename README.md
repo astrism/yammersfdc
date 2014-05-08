@@ -56,7 +56,7 @@ Now we're ready to create a place for our Yammer application to live. On to Sale
 		+ cmd+shift+p -> 'New Visualforce Page'
 		+ Name it 'accountsyammer'
 	+ From Salesforce UI
-		+ ```Setup -> Create -> Visualforce```
+		+ Setup -> Create -> visualforce
 
 Visualforce code:
 
@@ -64,9 +64,11 @@ Visualforce code:
             Hello Visualforce
         </apex:page>
 
-
 + view page in sfdc
-	+ 
+	+ http://<salesforce_domain>/apex/accountyammer
+
+
+
 + copy / paste yammer js sdk and embed sample
 	+ snippet for embed sales feed
 + copy / paste public token
