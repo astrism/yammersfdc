@@ -24,7 +24,7 @@ The measure of an apps longevity nowadays relys on the applications' ability to 
 The sample provided is only a demo of the functionality included in Yammer's Embe API. We've gotten a lot of interest in building a more robust appplication, so this is our starting point. As of now it is just duplicating the basic functionality of Yammer in any platform you choose (ours is Salesforce). There are some good
 
 ##Guide for setup
-Technology opinions are.. everywhere! I like to hear peoples tool recommendations, so there'll be some speckled throughout the guide. We'll also be jumping back and forth between Yammer and Salesforce.com platforms so I'll try to be explicit.
+Technology opinions are everywhere! I like to hear peoples tool recommendations, so there'll be some speckled throughout the guide. We'll also be jumping back and forth between Yammer and Salesforce.com platforms so I'll try to be explicit.
 
 ###Yammer signup
 + Assuming you have an existing yammer org
@@ -41,8 +41,22 @@ Now we're ready to create a place for our Yammer application to live. On to Sale
 
 ###Salesforce setup
 + create a new salesforce instance (DE)
+	+ https://developer.salesforce.com/
+	+ sign up -> fill out form -> sign me up
+	+ theme of orgs. Bill Nye, Science Guy. Has customers and partners. Hayden Planetarium is his customer. He wants to check with his accountants to ensure that Neil Tyson received the invoice. He messages Ken G., accountanting department, "Hey Ken, when did we send out the invoice to Neil?"
+	+ Ken answers, " Checking now.."
+		+ "He downloaded the invoice in March"
+	+ Bill, "Thanks bud."
 + links for vf api
-+ create visualforce page (mavens and )
+	+ quick start for VF page http://www.salesforce.com/us/developer/docs/pages/Content/pages_quick_start_hello_world.htm
+	+ general VF doc http://www.salesforce.com/us/developer/docs/pages/index.htm
++ create visualforce page 
+	+ Assuming you are doing this in your new Developer Edition instance of Salesforce
+	+ we typically use Mavens Mate and Sublime Text
+		+ cmd+shift+p -> 'New Visualforce Page'
+		+ Name it 'accountsyammer'
+	+ From Salesforce UI
+		+ Setup -> Create -> Visualforce
 + view page in sfdc
 + copy / paste yammer js sdk and embed sample
 	+ snippet for embed sales feed
