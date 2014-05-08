@@ -11,7 +11,7 @@ lib-cov
 logs
 results
 
-*.sublime*
+*.sublime-workspace
 dist/
 config/
 src/package.xml

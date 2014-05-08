@@ -50,13 +50,17 @@ Now we're ready to create a place for our Yammer application to live. On to Sale
 + links for vf api
 	+ quick start for VF page http://www.salesforce.com/us/developer/docs/pages/Content/pages_quick_start_hello_world.htm
 	+ general VF doc http://www.salesforce.com/us/developer/docs/pages/index.htm
-+ create visualforce page 
++ create visualforce page
 	+ Assuming you are doing this in your new Developer Edition instance of Salesforce
 	+ we typically use Mavens Mate and Sublime Text
 		+ cmd+shift+p -> 'New Visualforce Page'
 		+ Name it 'accountsyammer'
 	+ From Salesforce UI
 		+ Setup -> Create -> Visualforce
+
+		<apex:page showHeader="true" sidebar="true" standardController="Account" >
+			Hellow Visualforce
+		</apex:page>
 + view page in sfdc
 + copy / paste yammer js sdk and embed sample
 	+ snippet for embed sales feed
