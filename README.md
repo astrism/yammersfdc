@@ -58,6 +58,8 @@ Now we're ready to create a place for our Yammer application to live. On to Sale
 	+ From Salesforce UI
 		+ Setup -> Create -> Visualforce
 
+Here is the code for vf:
+
         <apex:page showHeader="true" sidebar="true" standardController="Account" >
             Hello Visualforce
         </apex:page>
