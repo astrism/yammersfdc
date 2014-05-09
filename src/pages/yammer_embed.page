@@ -1,6 +1,5 @@
 <apex:page showHeader="true" sidebar="true" standardController="Account" >
 	<script type="text/javascript" data-app-id="T7puTlcfvsPtImw14viWJw" src="https://assets.yammer.com/assets/platform_js_sdk.js"></script>
-	<span id="yammer-login"></span>
 	<script> 
 		yam.connect.loginButton('#yammer-login', function (resp) { 
 			if (resp.authResponse) { 
@@ -22,6 +21,7 @@
 		}); 
 	</script>
 
+	<span id="yammer-login"></span>
 	<div id="embed">
 		<div id="embedded-feed" style="width: 100%; height: 300px;"></div>
 	</div>
