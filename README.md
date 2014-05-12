@@ -9,13 +9,6 @@ reword..
 
 The measure of an apps longevity nowadays relys on the applications' ability to be easily integrated. How well does it play with others (i.e. is there an API)!? Yammer does a great job enabling itself to be 'easily' integrated.
 
-##When to use embed?
-You should use embed whenever you have multiple platforms across your technology infrastructure. A very common scenario when you use 'the right tool for the job' principle. For example, imagine you have Yammer for collaboration, Zendesk for service requests, Salesforce for CRM, Xero for accounting, and Papyrs for knowledge management. Yammer Embed inside each of these platforms is a great use case. This would make collaboration experience across your company more ubiquitous.
-
-Yammer Embed is very specific and easy to setup. Anything that is *easy* to setup is usually sacrifycing some flexibility and power.  CONCLUSION NEEDED
-<br/>
-[graphic of tech stack]
-
 ##Elephant in the room, Chatter
 Isn't Yammer just like Chatter? Why do I need Chatter if I have Yammer? We aren't trying to answer all these questions, but there are some differences between the two architectures which are important to point out. 
 
@@ -25,16 +18,12 @@ Salesforce (w/ Chatter) is composed of Users, Objects (fancy tables), Records, a
 
 Yammer is a great tool for promoting social interactions on your general business and specific departments/divisions of any business. The power of Yammer is in its simplicity. It does one thing, enable companies to be social about their business.
 
-##This is not a fully fledged application
-The sample provided is only a demo of the functionality included in Yammer's Embed API. We've gotten a lot of interest in building a more robust appplication, so this is our starting point. As of now it is just duplicating the basic functionality of Yammer in any platform you choose (ours is Salesforce).
-
 ##The Story
 + Bill Nye, Science Guy has customers and partners. From Salesforce, Bill wants to check with his accountants (who use Yammer) to ensure that Neil Tyson received the invoice. He messages Ken G., accountanting department, "Hey Ken, when did we send out the invoice to Neil?"
 + Ken answers from Yammer, " Checking now.."
 	+ "He downloaded the invoice in March"
 + Bill, "Thanks bud."
 <br/>[screenshot]
-
 
 ##Guide for setup
 Technology opinions are everywhere! I like to hear peoples tool recommendations, so there'll be some speckled throughout the guide. We'll also be jumping back and forth between Yammer and Salesforce.com platforms, so I'll try to be explicit.
@@ -159,15 +148,7 @@ As of now we have a standalone page that just shows your yammer feed. We need to
 
 Your demo app is now complete. Yammer's API has a lot more to it then just the Embed widget. We think this is great start for anyone interested in breaking into Yammer development on the Salesforce platform. Happy coding.
 
-###Salesforce deploy to production
-		//TBD
-
 
 ##Gotchas of APIs
-###Salesforce.com
-		//TBD
 ###Yammer
 		//TBD
-
-##Inexpertise
-We are by no means experts on the Yammer platform, but the API makes it very easy to understand. If there are any mistakes in this article, please be kind and point the out. We'll get them fixed and everyone will learn something.
