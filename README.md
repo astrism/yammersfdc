@@ -1,13 +1,9 @@
 #Yammer anywhere in Salesforce.com
 ##Why? 
 
-reword..
+If your company has yammer and salesforce.com, this is relevant to you. Yammer has developed a very easy to integrate javascript sdk which allows you easily integrate any Yammer feed with very few lines of code. This is ideal for any company looking to make their internal software more tightly integrated.
 
-If your company has yammer and salesforce.com, this is relevant to you. Yammer has developed a very easy to integrate javascript sdk which allows you easily integrate any Yammer feed with very few lines of code. This is ideal for any company looking to make their internal software more tightly integrated. **internal user experience more tightly integrated**
-
-reword..
-
-The measure of an apps longevity nowadays relys on the applications' ability to be easily integrated. How well does it play with others (i.e. is there an API)!? Yammer does a great job enabling itself to be 'easily' integrated.
+The measure of an application's longevity relys on its ability to be easily integrated. How well does it play with others (i.e. is there an API)!? Yammer does a great job enabling itself to be 'easily' integrated.
 
 ##Elephant in the room, Chatter
 Isn't Yammer just like Chatter? Why do I need Chatter if I have Yammer? We aren't trying to answer all these questions, but there are some differences between the two architectures which are important to point out. 
@@ -22,11 +18,10 @@ Yammer is a great tool for promoting social interactions on your general busines
 + Bill Nye, Science Guy has customers and partners. From Salesforce, Bill wants to check with his accountants (who use Yammer) to ensure that Neil Tyson received the invoice. He messages Ken Gene, accountanting department, "Hey Ken, when did we send out the invoice to Neil?"
 + Ken answers from Yammer, " Checking now.."
 	+ "He downloaded the invoice in March"
-+ ...
 
 <br/>
 
-![alt yammer conversation](img/yammer_story_account_sfdc.png "Yammer Conversation in SFDC")
+![yammer conversation](img/yammer_story_account_sfdc.png)
 
 ##Guide for setup
 Technology opinions are everywhere! I like to hear peoples tool recommendations, so there'll be some speckled throughout the guide. We'll also be jumping back and forth between Yammer and Salesforce.com platforms, so I'll try to be explicit.
