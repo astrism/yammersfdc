@@ -10,7 +10,7 @@ Isn't Yammer just like Chatter? Why do I need Chatter if I have Yammer? We aren'
 
 Yammer is built around the idea of Users, Groups, and Feeds. A user belongs to many groups, which have their own individual feeds. Everyone belongs to the 'All Company' group by default. Our Yammer has Sales, Marketing, Accounting, and Engineering groups.
 
-Salesforce (w/ Chatter) is composed of Users, Objects (fancy tables), Records, and Feeds. Salesforce specializes in CRM data and with chatter everything is related to a set of data or specific record. There is another layer of granularity with Chatter because it is designed within the *context* of CRM data. ..CONCLUSION NEEDED
+Salesforce (w/ Chatter) is composed of Users, Objects (fancy tables), Records, and Feeds. Salesforce specializes in CRM data and with chatter everything is related to a set of data or specific record. There is another layer of granularity with Chatter because it is designed within the *context* of CRM data. Which is the main difference betweent the two.
 
 Yammer is a great tool for promoting social interactions on your general business and specific departments/divisions of any business. The power of Yammer is in its simplicity. It does one thing, enable companies to be social about their business.
 
@@ -18,6 +18,8 @@ Yammer is a great tool for promoting social interactions on your general busines
 + Bill Nye, Science Guy has customers and partners. From Salesforce, Bill wants to check with his accountants (who use Yammer) to ensure that Neil Tyson received the invoice. He messages Ken Gene, accountanting department, "Hey Ken, when did we send out the invoice to Neil?"
 + Ken answers from Yammer, " Checking now.."
 	+ "He downloaded the invoice in March"
+
+####In Salesforce:
 
 ![yammer conversation](https://bitbucket.org/nimblyclient/yammersalesforce/raw/master/img/yammer_story_account_sfdc.png)
 
