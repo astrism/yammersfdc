@@ -28,10 +28,9 @@ Yammer is a great tool for promoting social interactions on your general busines
 ##This is not a fully fledged application
 The sample provided is only a demo of the functionality included in Yammer's Embed API. We've gotten a lot of interest in building a more robust appplication, so this is our starting point. As of now it is just duplicating the basic functionality of Yammer in any platform you choose (ours is Salesforce).
 
-##HEADING
-Here's the end result :
-+ theme of orgs. Bill Nye, Science Guy. Has customers and partners. Hayden Planetarium is his customer. He wants to check with his accountants to ensure that Neil Tyson received the invoice. He messages Ken G., accountanting department, "Hey Ken, when did we send out the invoice to Neil?"
-+ Ken answers, " Checking now.."
+##The Story
++ Bill Nye, Science Guy has customers and partners. From Salesforce, Bill wants to check with his accountants (who use Yammer) to ensure that Neil Tyson received the invoice. He messages Ken G., accountanting department, "Hey Ken, when did we send out the invoice to Neil?"
++ Ken answers from Yammer, " Checking now.."
 	+ "He downloaded the invoice in March"
 + Bill, "Thanks bud."
 <br/>[screenshot]
@@ -41,21 +40,27 @@ Here's the end result :
 Technology opinions are everywhere! I like to hear peoples tool recommendations, so there'll be some speckled throughout the guide. We'll also be jumping back and forth between Yammer and Salesforce.com platforms, so I'll try to be explicit.
 
 ###Yammer signup
-<br/> The first thing you need to start is a Yammer domain. We are assuming you already have this setup because Yammer checks your email address. "Only people with a verified company email address can join your company network." - Yammer
-<br/> You can sign-up for Yamme here https://www.yammer.com/?return_home=true
-+ Create a group, Sales (any group will be fine, just change 'Sales' to your group name)
-+ Links for yammer api , js sdk embed
-	+ [links to yammer api]
-Create app
-+ CORS is an important part of the javascript sdk. Here is some good documentation on why we need to reference them here [http://www.html5rocks.com/en/tutorials/cors/]. TLDR; when using client side javascript to make callouts to external sources (XHR to Yammer API), the requested server has to be able to accept Cross-Origin requests. We won't go into more detail as it is out of the scope of this article.
-+ [screen shot of app config'd]
+The first thing you need to [start is a Yammer domain](https://www.yammer.com/?return_home=true). We are assuming you already have this setup because Yammer checks your email address. "Only people with a verified company email address can join your company network." - Yammer
++ Log into your Yammer instance
++ Create a group, we'll use 'Accounting' as an example (we'll reference this group later)
+
+Create a Yammer App
++ Navigate to 'Created Apps'
++ 'Register New App'
+	+ App Name: salesforceyammin
+	+ Organization: example llc
+	+ Support email: help@examplellc.com
+	+ Website: http://www.examplellc.com
++ Done!
+
+We will need the Client ID when creating the html/scripts of our app in Salesforce later, so just keep it handy. In order to use the Yammer Embed API we'll have to put our specify our 'Javascript Origins' in the 'Basic Info' section of the app. We dont' know the urls yet, so we'll be coming back later.
+<br>
+Javascript Origins is for CORS. CORS is an important part of the javascript sdk. Here is some good documentation on why we need to reference them [here](http://www.html5rocks.com/en/tutorials/cors/). TLDR; when using client side javascript to make callouts to external sources (XHR to Yammer API), the requested server has to be able to accept Cross-Origin requests. We won't go into more detail as it is out of the scope of this article.
 
 Now we're ready to create a place for our Yammer application to live. On to Salesforce.com
 
 ###Salesforce setup
-Create a new salesforce instance (DE)
-
-+ https://developer.salesforce.com/
+Create a new [salesforce instance (DE)](https://developer.salesforce.com/)
 + sign up -> fill out form -> sign me up
 
 Or
@@ -65,17 +70,17 @@ Or
 
 ####Salesforce setup
 
-Quick start VF page doc http://www.salesforce.com/us/developer/docs/pages/Content/pages_quick_start_hello_world.htm
+[Quick start VF page doc](http://www.salesforce.com/us/developer/docs/pages/Content/pages_quick_start_hello_world.htm)
 <br/>
-VF doc http://www.salesforce.com/us/developer/docs/pages/index.htm
+[Full VF doc](http://www.salesforce.com/us/developer/docs/pages/index.htm)
 
 #####Create Visualforce page
 Once logged into your new Salesforce.com org
 + From the Salesforce UI
 	+ Setup -> Create -> Visualforce
-+ We use Mavens Mate and Sublime Text
++ Our preffered Salesforce IDE [Mavens Mate for Sublime Text](http://mavensmate.com/)
 	+ cmd+shift+p -> 'New Visualforce Page'
-	+ Name it 'accountsyammer'
+	+ Name it 'accountyammer'
 
 Visualforce code:
 
@@ -83,16 +88,16 @@ Visualforce code:
 			Hello Visualforce
 		</apex:page>
 
-Preview the page in sfdc. http://SALESFORCE_DOMAIN.com/apex/accountyammer
+Preview the page in sfdc. https://SALESFORCE_DOMAIN.com/apex/accountyammer
 
 ####Yammer widget in Visualforce page
-(ref: https://developer.yammer.com/connect/)
+[Embed API ref](https://developer.yammer.com/connect/)
 
 We have a Visualforce page setup, let's drop in our Yammer Embed widget. In your visualforce page, include the Yammer js sdk. The data-app-id is the public token genereated when you create your Yammer App. Find the Id through Yammer.com, Created Apps -> app_name -> Client Id.
 
-		<script type="text/javascript" data-app-id="YOUR_APP_ID" src="https://assets.yammer.com/assets/platform_js_sdk.js"></script>
+		<script type="text/javascript" data-app-id="YOUR_CLIENT_ID" src="https://assets.yammer.com/assets/platform_js_sdk.js"></script>
 
-The first thing to do after we have the widget is to authenticate with the Yammer servers.
+The first thing to do after we have the widget is to authenticate with the Yammer servers. [Yammer Client-side OAuth 2](http://developer.yammer.com/authentication/#a-button)
 		
 		<script> 
 			yam.connect.loginButton('#yammer-login', function (resp) { 
@@ -106,9 +111,11 @@ The first thing to do after we have the widget is to authenticate with the Yamme
 		</script>
 		<span id="yammer-login"></span>
 
-Refresh your page. You should receive a javascript exception in your console (I'm testing with Chrome and Mac, so cmd+alt+j toggles the Javascript Console). The errro should say that 'Allow-Access-Control-Origin'. This is the CORS I was mentioning above. To fix, define the salesforce domain in Javascript Origins portion of your Yammer App. (Ex: https://c.na15.visual.force.com/). Refresh and the error should be gone.
+Refresh your page in your browser. You should receive a javascript exception in your console (I'm testing with Chrome and Mac, so cmd+alt+j toggles the Javascript Console). The error should say that 'Allow-Access-Control-Origin'. This is the CORS I was mentioning above. To fix, define the salesforce domain in Javascript Origins portion of your Yammer App. (Ex: https://c.na15.visual.force.com/). Refresh and the error should be gone.
++ Created Apps -> My Apps -> sfdcyammin -> Basic Info -> Javascript Origins
++ https://c.na15.visual.force.com/
 
-Now add the html for the embed widget and the javascript to render your feed.
+Add the html for the embed widget and the javascript to render your feed.
 		
 		<script> 
 			yam.connect.loginButton('#yammer-login', function (resp) { 
@@ -116,9 +123,9 @@ Now add the html for the embed widget and the javascript to render your feed.
 					console.log('pass');
 					yam.connect.embedFeed({
 						container: '#embedded-feed',
-						network: 'gonimbly.com',
+						network: 'examplellc.com',
 						feedType: 'group',
-						feedId: 'all',
+						feedId: 'Accounting',
 						config: {
 							use_sso: true,
 							header: false,
@@ -136,7 +143,7 @@ Now add the html for the embed widget and the javascript to render your feed.
 
 Your Yammer feed should now load automatically, after you've logged in once through Yammer.
 
-The Embed component works best with some limited context. It would be nice to see the feed while looking at an Account record in Salesforce.com. You can accomplish this with Visualforce pre-built components, specifically the 'detail' component. (ref: https://www.salesforce.com/us/developer/docs/pages/Content/pages_compref_detail.htm)
+The Embed component works best with some limited context. It would be nice to see the feed while looking at an Account record in Salesforce.com. You can accomplish this with Visualforce pre-built components, specifically the ['detail' component](ref: https://www.salesforce.com/us/developer/docs/pages/Content/pages_compref_detail.htm). 
 		
 		<apex:detail subject="{!account.Id}" />
 
@@ -144,13 +151,13 @@ As of now we have a standalone page that just shows your yammer feed. We need to
 
 + Navigate to Setup -> Customize -> Accounts -> Buttons, Links, and Actions
 + Edit the action labeled 'View' 
-+ Override with your Visualforce page, 'accountsyammer'. Note: it is available in the drop down because we defined our Visualforce page to have the 'Account' as the standardController attribute.
++ Override with your Visualforce page, 'accountyammer'. Note: it is available in the drop down because we defined our Visualforce page to have the 'Account' as the standardController attribute.
 + If you don't have a record in the Account object, you can create one now. Navigate to the Accounts tab and click New.
 + Otherwise navigate to an Account record and you should see your Yammer feed 'embeded' in your Account detail page.
 + add collapsible
 	+ //TBD
 
-Your demo app should be complete. Yammer's API has a lot more to it then just the Embed widget. We think this is great start for anyone interested in breaking into Yammer development on the Salesforce platform. Happy coding.
+Your demo app is now complete. Yammer's API has a lot more to it then just the Embed widget. We think this is great start for anyone interested in breaking into Yammer development on the Salesforce platform. Happy coding.
 
 ###Salesforce deploy to production
 		//TBD
