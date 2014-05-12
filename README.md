@@ -19,11 +19,11 @@ Salesforce (w/ Chatter) is composed of Users, Objects (fancy tables), Records, a
 Yammer is a great tool for promoting social interactions on your general business and specific departments/divisions of any business. The power of Yammer is in its simplicity. It does one thing, enable companies to be social about their business.
 
 ##The Story
-+ Bill Nye, Science Guy has customers and partners. From Salesforce, Bill wants to check with his accountants (who use Yammer) to ensure that Neil Tyson received the invoice. He messages Ken G., accountanting department, "Hey Ken, when did we send out the invoice to Neil?"
++ Bill Nye, Science Guy has customers and partners. From Salesforce, Bill wants to check with his accountants (who use Yammer) to ensure that Neil Tyson received the invoice. He messages Ken Gene, accountanting department, "Hey Ken, when did we send out the invoice to Neil?"
 + Ken answers from Yammer, " Checking now.."
 	+ "He downloaded the invoice in March"
-+ Bill, "Thanks bud."
-<br/>[screenshot]
++ ...
+<br/>![alt yammer conversation](img/yammer_story_account_sfdc.png "Yammer Conversation in SFDC")
 
 ##Guide for setup
 Technology opinions are everywhere! I like to hear peoples tool recommendations, so there'll be some speckled throughout the guide. We'll also be jumping back and forth between Yammer and Salesforce.com platforms, so I'll try to be explicit.
@@ -44,7 +44,7 @@ Create a Yammer App
 
 We will need the Client ID when creating the html/scripts of our app in Salesforce later, so just keep it handy. In order to use the Yammer Embed API we'll have to put our specify our 'Javascript Origins' in the 'Basic Info' section of the app. We dont' know the urls yet, so we'll be coming back later.
 <br>
-Javascript Origins is for CORS. CORS is an important part of the javascript sdk. Here is some good documentation on why we need to reference them [here](http://www.html5rocks.com/en/tutorials/cors/). TLDR; when using client side javascript to make callouts to external sources (XHR to Yammer API), the requested server has to be able to accept Cross-Origin requests. We won't go into more detail as it is out of the scope of this article.
+Javascript Origins is for CORS. [CORS](http://www.html5rocks.com/en/tutorials/cors/) is an important part of the javascript sdk. TLDR; when using client side javascript to make callouts to external sources (XHR to Yammer API), the requested server has to be able to accept Cross-Origin requests. We won't go into more detail as it is out of the scope of this article.
 
 Now we're ready to create a place for our Yammer application to live. On to Salesforce.com
 
