@@ -19,8 +19,7 @@ Yammer is a great tool for promoting social interactions on your general busines
 + Ken answers from Yammer, " Checking now.."
 	+ "He downloaded the invoice in March"
 
-
-![yammer conversation](./img/yammer_story_account_sfdc.png)
+![yammer conversation](https://bitbucket.org/nimblyclient/yammersalesforce/raw/master/img/yammer_story_account_sfdc.png)
 
 ##Guide for setup
 Technology opinions are everywhere! I like to hear peoples tool recommendations, so there'll be some speckled throughout the guide. We'll also be jumping back and forth between Yammer and Salesforce.com platforms, so I'll try to be explicit.
