@@ -32,7 +32,8 @@ The first thing you need to [start is a Yammer domain](https://www.yammer.com/?r
 + Create a group - we'll use 'Accounting' as an example (we'll reference this group later)
 
 Create a Yammer App
-+ Navigate to 'Created Apps'
++ [Guide](http://developer.yammer.com/introduction/#gs-registerapp) to getting started
++ Navigate to ['Created Apps'](https://www.yammer.com/client_applications)
 + 'Register New App'
 	+ App Name: salesforceyammin
 	+ Organization: example llc
