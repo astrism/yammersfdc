@@ -175,7 +175,7 @@ The Yammer API is great to get up and running quickly, but it still only resolve
 Context awareness (with Yammer in Salesforce) requires a middle-tier database to hold/manage relationships between business data (accounts/contacts/billings) and social data. I'd be interested in seeing a simple nosql application to prove out this architecture.
 
 ###Advice on the "middle-tier"
-In this case it would be a great time to take advantage of Salesforce.com's Canvas'ing capabilities. Which allow you to host a Heroku application authenticated within Salesforce.com user interface. Use your technology of choice (Java, Ruby, Node.js) and more easily integrate the two systems.
+In this case it would be a great time to take advantage of Salesforce.com's Canvas'ing capabilities. Which allow you to host a Heroku application authenticated within Salesforce.com user interface. Use your technology of choice (Java, Ruby, Node.js) to integrate Salesforce and Yammer.
 
 ##You're done!
 We think this is a great start for anyone interested in beginning Yammer development on the Salesforce platform. Let us know if you have any questions or comments.
