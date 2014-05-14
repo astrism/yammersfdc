@@ -26,7 +26,7 @@ Yammer is a great tool for promoting social interactions about your general busi
 ##Guide for setup
 Technology opinions are everywhere! I like to hear peoples' tool recommendations, so there'll be some speckled throughout the guide. We'll also be jumping back and forth between Yammer and Salesforce.com platforms, so I'll try to be explicit.
 
-###Yammer signup
+###Yammer sign-up
 The first thing you need to [start is a Yammer domain](https://www.yammer.com/?return_home=true). We are assuming you already have this setup because Yammer checks your email address. "Only people with a verified company email address can join your company network." - Yammer
 + Log into your Yammer instance
 + Create a group - we'll use 'Accounting' as an example (we'll reference this group later)
@@ -168,7 +168,7 @@ Your demo app is now complete. Yammer's API has a lot more to it than just the E
 
 ##Learns of the APIs
 ###Context is important
-Having a comment on a specific record/data in any system is a baseline for any internal system claiming to be 'social'. The reasons are obvious, because an app without the proper context is garuanteed to display irrelivant information. And irrelivant information, with some useful pieces speckled throughout, is actually worse for users than no information at all.
+Having a comment on a specific record/data in any system is a baseline for any internal system claiming to be 'social'. The reasons are obvious, because an app without the proper context is guaranteed to display irrelevant information. And irrelevant information, with some useful pieces speckled throughout, is actually worse for users than no information at all.
 
 The Yammer API is great to get up and running quickly, but it still only resolves a simple use case of social interactions in your CRM system. It does NOT make it easy to enable context aware social interactions in your systems. 
 
