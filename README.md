@@ -144,9 +144,21 @@ As of now we have a standalone page that just shows your yammer feed. We need to
 + add collapsible
 	+ //TBD
 
-Your demo app is now complete. Yammer's API has a lot more to it than just the Embed widget. We think this is a great start for anyone interested in beginning Yammer development on the Salesforce platform. Happy coding.
+Your demo app is now complete. Yammer's API has a lot more to it than just the Embed widget, so be sure to check out all the documentation.
 
 
-##Gotchas of APIs
-###Yammer
-		//TBD
+##Learns of the APIs
+###Context is important
+Having a comment on a specific record/data in any system is a baseline for any internal system claiming to be 'social'. The reasons are obvious, because an app without the proper context is garuanteed to display irrelivant information. And irrelivant information, with some useful pieces speckled throughout, is actually worse for users than no information at all.
+
+The Yammer API is great to get up and running quickly, but it still only resolves a simple use case of social interactions in your CRM system. It does NOT make it easy to enable context aware social interactions in your systems. 
+
+Context awareness (with Yammer in Salesforce) requires a middle-tier database to hold/manage relationships between business data (accounts/contacts/billings) and social data. I'd be interested in seeing a simple nosql application to prove out this architecture.
+
+###Advice on the "middle-tier"
+In this case it would be a great time to take advantage of Salesforce.com's Canvas'ing capabilities. Which allow you to host a Heroku application authenticated within Salesforce.com user interface. Use your technology of choice (Java, Ruby, Node.js) and more easily integrate the two systems.
+
+##You're done!
+We think this is a great start for anyone interested in beginning Yammer development on the Salesforce platform. Let us know if you have any questions or comments.
+
+Happy coding!
