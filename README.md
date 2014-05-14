@@ -141,8 +141,27 @@ As of now we have a standalone page that just shows your yammer feed. We need to
 + Override with your Visualforce page, 'accountyammer'. Note: it is available in the drop down because we defined our Visualforce page to have the 'Account' as the standardController attribute.
 + If you don't have a record in the Account object, you can create one now. Navigate to the Accounts tab and click New.
 + Otherwise navigate to an Account record and you should see your Yammer feed 'embedded' in your Account detail page.
-+ add collapsible
-	+ //TBD
+
+This works fine, but it would be nice if we could hide the feed when we want to only see the account details. Wrap the 'embedded-feed' tag in a div and add an element we can click.
+
+		<div id="feed">Yammer Feed</div>
+		<div id="feedHolder">
+			<div id="embedded-feed" style="width: 100%; height: 300px;"></div>
+		</div>
+
+We can make this super easy by including jquery to toggle the display of the feed. Jquery is a bit overkill, but is fine for this demo.
+
+		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script> 
+			//yammer sdk uses jquery as a dependency, so I want to eliminate any possible conflicts
+			var $j = jQuery.noConflict();
+			//necessary for adding events after dom elements loaded
+			$j( function() {
+				$j("#feed").click( function() { $j("#feedHolder").toggle() });
+			});
+			...
+		</script>
+
 
 Your demo app is now complete. Yammer's API has a lot more to it than just the Embed widget, so be sure to check out all the documentation.
 
