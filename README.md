@@ -27,7 +27,7 @@ Yammer is a great tool for promoting social interactions about your general busi
 Technology opinions are everywhere! I like to hear peoples' tool recommendations, so there'll be some speckled throughout the guide. We'll also be jumping back and forth between Yammer and Salesforce.com platforms, so I'll try to be explicit.
 
 ###Yammer sign-up
-The first thing you need to [start is a Yammer domain](https://www.yammer.com/?return_home=true). We are assuming you already have this setup because Yammer checks your email address. "Only people with a verified company email address can join your company network." - Yammer
+The first thing you need to [start is a Yammer domain](https://www.yammer.com/?return_home=true). We'll assume you already have this setup since you are still reading, so let's get started.
 + Log into your Yammer instance
 + Create a group - we'll use 'Accounting' as an example (we'll reference this group later)
 
