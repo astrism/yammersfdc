@@ -64,11 +64,13 @@ Or
 
 #####Create Visualforce page
 Once logged into your new Salesforce.com org
-+ From the Salesforce UI
-	+ Setup -> Develop -> Visualforce
-+ Our prefered Salesforce IDE is [Mavens Mate for Sublime Text](http://mavensmate.com/)
++ Option 1: From the Salesforce UI
+	+ Setup -> Develop -> Pages
+	+ Click the `New` Button
+	+ Name the page 'accountyammer'
++ Option 2: Our preferred Salesforce IDE is [Mavens Mate for Sublime Text](http://mavensmate.com/)
 	+ cmd+shift+p -> 'New Visualforce Page'
-	+ Name it 'accountyammer'
+	+ Name the page 'accountyammer'
 
 Visualforce code:
 
