@@ -26,12 +26,12 @@ Yammer is a great tool for promoting social interactions about your general busi
 ##Guide for setup
 Technology opinions are everywhere! I like to hear peoples' tool recommendations, so there'll be some speckled throughout the guide. We'll also be jumping back and forth between Yammer and Salesforce.com platforms, so I'll try to be explicit.
 
-###Yammer sign-up
+###Yammer signup
 The first thing you need to [start is a Yammer domain](https://www.yammer.com/?return_home=true). We are assuming you already have this setup because Yammer checks your email address. "Only people with a verified company email address can join your company network." - Yammer
 + Log into your Yammer instance
 + Create a group - we'll use 'Accounting' as an example (we'll reference this group later)
 
-Create a Yammer App
+####Create a Yammer App
 + [Guide](http://developer.yammer.com/introduction/#gs-registerapp) to getting started
 + Navigate to ['Created Apps'](https://www.yammer.com/client_applications)
 + 'Register New App'
@@ -47,7 +47,7 @@ Javascript Origins is for CORS. [CORS](http://www.html5rocks.com/en/tutorials/co
 
 Now we're ready to create a place for our Yammer application to live. On to Salesforce.com
 
-###Salesforce setup
+###Salesforce signup
 Create a new [salesforce instance (DE)](https://developer.salesforce.com/)
 + sign up -> fill out form -> sign me up
 
@@ -135,6 +135,7 @@ The Embed component works best with some limited context. It would be nice to se
 		
 		<apex:detail subject="{!account.Id}" />
 
+####Configure Account detail override
 As of now we have a standalone page that just shows your yammer feed. We need to override the account object's 'view' to give the application a record's context with Yammer feed. In Salesforce.com:
 
 + Navigate to Setup -> Customize -> Accounts -> Buttons, Links, and Actions
