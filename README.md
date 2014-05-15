@@ -99,7 +99,7 @@ The first thing to do after we have the widget is to authenticate with the Yamme
 		</script>
 		<span id="yammer-login"></span>
 
-Refresh your page in your browser. You should receive a javascript exception in your console (I'm testing with Chrome and Mac, so cmd+alt+j toggles the Javascript Console). The error should say that 'Allow-Access-Control-Origin'. This is the CORS I was mentioning above. To fix, define the salesforce domain in Javascript Origins portion of your Yammer App. (Ex: https://c.na15.visual.force.com/). Refresh and the error should be gone.
+Refresh the page in your browser. You should receive a javascript exception in your console (I'm testing with Chrome and Mac, so cmd+alt+j toggles the Javascript Console). The error should say that 'Allow-Access-Control-Origin'. This is the CORS I was mentioning above. To fix, define the salesforce domain in Javascript Origins portion of your Yammer App. (Ex: https://c.na15.visual.force.com/). Refresh and the error should be gone.
 + Created Apps -> My Apps -> sfdcyammin -> Basic Info -> Javascript Origins
 + https://c.na15.visual.force.com/
 
