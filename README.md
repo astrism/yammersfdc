@@ -111,7 +111,7 @@ Add the html for the embed widget and the javascript to render your feed.
 					console.log('pass');
 					yam.connect.embedFeed({
 						container: '#embedded-feed',
-						network: 'examplellc.com',
+						network: 'examplellc.com', // This must match your Yammer domain
 						feedType: 'group',
 						feedId: 'Accounting',
 						config: {
@@ -126,16 +126,17 @@ Add the html for the embed widget and the javascript to render your feed.
 				}
 			}); 
 		</script>
+		<span id="yammer-login"></span>
 		<div id="embedded-feed" style="height:400px;width:500px;"></div>
 		...
 
 Your Yammer feed should now load automatically, after you've logged in once through Yammer.
+####Configure Account detail override
 
 The Embed component works best with some limited context. It would be nice to see the feed while looking at an Account record in Salesforce.com. You can accomplish this with Visualforce pre-built components, specifically the ['detail' component](ref: https://www.salesforce.com/us/developer/docs/pages/Content/pages_compref_detail.htm). 
 		
 		<apex:detail subject="{!account.Id}" />
 
-####Configure Account detail override
 As of now we have a standalone page that just shows your yammer feed. We need to override the account object's 'view' to give the application a record's context with Yammer feed. In Salesforce.com:
 
 + Navigate to Setup -> Customize -> Accounts -> Buttons, Links, and Actions
